@@ -1,0 +1,1831 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="http://logio.org">log.io (v0.3.4)</a>
+</h1>
+<h4>Realtime log monitoring in your browser</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.log.io">module log.io</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.LogHarvester">
+            function <span class="apidocSignatureSpan">log.io.</span>LogHarvester
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.LogServer">
+            function <span class="apidocSignatureSpan">log.io.</span>LogServer
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.WebServer">
+            function <span class="apidocSignatureSpan">log.io.</span>WebServer
+            <span class="apidocSignatureSpan">(logServer, config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.io.LogHarvester">
+            function <span class="apidocSignatureSpan">log.io.</span>io.LogHarvester
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.io.LogServer">
+            function <span class="apidocSignatureSpan">log.io.</span>io.LogServer
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.io.WebServer">
+            function <span class="apidocSignatureSpan">log.io.</span>io.WebServer
+            <span class="apidocSignatureSpan">(logServer, config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">log.io.</span>io.LogHarvester.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">log.io.</span>io.LogServer.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">log.io.</span>io.WebServer.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">log.io.</span>io.harvester</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">log.io.</span>io.server</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.log.io.LogHarvester">module log.io.LogHarvester</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.LogHarvester.LogHarvester">
+            function <span class="apidocSignatureSpan">log.io.</span>LogHarvester
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.log.io.LogHarvester.prototype">module log.io.LogHarvester.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.LogHarvester.prototype._announce">
+            function <span class="apidocSignatureSpan">log.io.LogHarvester.prototype.</span>_announce
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.LogHarvester.prototype._connect">
+            function <span class="apidocSignatureSpan">log.io.LogHarvester.prototype.</span>_connect
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.LogHarvester.prototype._send">
+            function <span class="apidocSignatureSpan">log.io.LogHarvester.prototype.</span>_send
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.LogHarvester.prototype._sendLog">
+            function <span class="apidocSignatureSpan">log.io.LogHarvester.prototype.</span>_sendLog
+            <span class="apidocSignatureSpan">(stream, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.LogHarvester.prototype.run">
+            function <span class="apidocSignatureSpan">log.io.LogHarvester.prototype.</span>run
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.log.io.LogServer">module log.io.LogServer</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">log.io.LogServer.</span>usingDomains</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.LogServer.LogServer">
+            function <span class="apidocSignatureSpan">log.io.</span>LogServer
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.LogServer.EventEmitter">
+            function <span class="apidocSignatureSpan">log.io.LogServer.</span>EventEmitter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.LogServer.init">
+            function <span class="apidocSignatureSpan">log.io.LogServer.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.LogServer.listenerCount">
+            function <span class="apidocSignatureSpan">log.io.LogServer.</span>listenerCount
+            <span class="apidocSignatureSpan">(emitter, type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">log.io.LogServer.</span>defaultMaxListeners</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">log.io.LogServer.</span>__super__</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.log.io.LogServer.prototype">module log.io.LogServer.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.LogServer.prototype.__add">
+            function <span class="apidocSignatureSpan">log.io.LogServer.prototype.</span>__add
+            <span class="apidocSignatureSpan">(name, pnames, _collection, _objClass, objName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.LogServer.prototype.__remove">
+            function <span class="apidocSignatureSpan">log.io.LogServer.prototype.</span>__remove
+            <span class="apidocSignatureSpan">(name, _collection, objType)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.LogServer.prototype._addNode">
+            function <span class="apidocSignatureSpan">log.io.LogServer.prototype.</span>_addNode
+            <span class="apidocSignatureSpan">(nname, snames)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.LogServer.prototype._addStream">
+            function <span class="apidocSignatureSpan">log.io.LogServer.prototype.</span>_addStream
+            <span class="apidocSignatureSpan">(sname, nnames)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.LogServer.prototype._bindNode">
+            function <span class="apidocSignatureSpan">log.io.LogServer.prototype.</span>_bindNode
+            <span class="apidocSignatureSpan">(socket, obj, nname)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.LogServer.prototype._flush">
+            function <span class="apidocSignatureSpan">log.io.LogServer.prototype.</span>_flush
+            <span class="apidocSignatureSpan">(socket)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.LogServer.prototype._handle">
+            function <span class="apidocSignatureSpan">log.io.LogServer.prototype.</span>_handle
+            <span class="apidocSignatureSpan">(socket, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.LogServer.prototype._newLog">
+            function <span class="apidocSignatureSpan">log.io.LogServer.prototype.</span>_newLog
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.LogServer.prototype._ping">
+            function <span class="apidocSignatureSpan">log.io.LogServer.prototype.</span>_ping
+            <span class="apidocSignatureSpan">(socket)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.LogServer.prototype._receive">
+            function <span class="apidocSignatureSpan">log.io.LogServer.prototype.</span>_receive
+            <span class="apidocSignatureSpan">(data, socket)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.LogServer.prototype._removeNode">
+            function <span class="apidocSignatureSpan">log.io.LogServer.prototype.</span>_removeNode
+            <span class="apidocSignatureSpan">(nname)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.LogServer.prototype._removeStream">
+            function <span class="apidocSignatureSpan">log.io.LogServer.prototype.</span>_removeStream
+            <span class="apidocSignatureSpan">(sname)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.LogServer.prototype._tearDown">
+            function <span class="apidocSignatureSpan">log.io.LogServer.prototype.</span>_tearDown
+            <span class="apidocSignatureSpan">(socket)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.LogServer.prototype.constructor">
+            function <span class="apidocSignatureSpan">log.io.LogServer.prototype.</span>constructor
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.LogServer.prototype.run">
+            function <span class="apidocSignatureSpan">log.io.LogServer.prototype.</span>run
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.log.io.WebServer">module log.io.WebServer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.WebServer.WebServer">
+            function <span class="apidocSignatureSpan">log.io.</span>WebServer
+            <span class="apidocSignatureSpan">(logServer, config)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.log.io.WebServer.prototype">module log.io.WebServer.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.WebServer.prototype._buildServer">
+            function <span class="apidocSignatureSpan">log.io.WebServer.prototype.</span>_buildServer
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.WebServer.prototype._createServer">
+            function <span class="apidocSignatureSpan">log.io.WebServer.prototype.</span>_createServer
+            <span class="apidocSignatureSpan">(config, app)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.WebServer.prototype.run">
+            function <span class="apidocSignatureSpan">log.io.WebServer.prototype.</span>run
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.log.io.harvester">module log.io.harvester</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.harvester.LogHarvester">
+            function <span class="apidocSignatureSpan">log.io.harvester.</span>LogHarvester
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.log.io.server">module log.io.server</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.server.LogServer">
+            function <span class="apidocSignatureSpan">log.io.server.</span>LogServer
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.log.io.server.WebServer">
+            function <span class="apidocSignatureSpan">log.io.server.</span>WebServer
+            <span class="apidocSignatureSpan">(logServer, config)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.log.io" id="apidoc.module.log.io">module log.io</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.LogHarvester" id="apidoc.element.log.io.LogHarvester">
+        function <span class="apidocSignatureSpan">log.io.</span>LogHarvester
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function LogHarvester(config) {
+  var paths, s, _ref, _ref1;
+  this.nodeName = config.nodeName, this.server = config.server;
+  this.delim = (_ref = config.delimiter) != null ? _ref : '\r\n';
+  this._log = (_ref1 = config.logging) != null ? _ref1 : winston;
+  this.logStreams = (function() {
+    var _ref2, _results;
+    _ref2 = config.logStreams;
+    _results = [];
+    for (s in _ref2) {
+      paths = _ref2[s];
+      _results.push(new LogStream(s, paths, this._log));
+    }
+    return _results;
+  }).call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.LogServer" id="apidoc.element.log.io.LogServer">
+        function <span class="apidocSignatureSpan">log.io.</span>LogServer
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function LogServer(config) {
+  var _ref, _ref1;
+  if (config == null) {
+    config = {};
+  }
+  this._flush = __bind(this._flush, this);
+
+  this._receive = __bind(this._receive, this);
+
+  this.host = config.host, this.port = config.port;
+  this._log = (_ref = config.logging) != null ? _ref : winston;
+  this._delimiter = (_ref1 = config.delimiter) != null ? _ref1 : '\r\n';
+  this.logNodes = {};
+  this.logStreams = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.WebServer" id="apidoc.element.log.io.WebServer">
+        function <span class="apidocSignatureSpan">log.io.</span>WebServer
+        <span class="apidocSignatureSpan">(logServer, config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WebServer(logServer, config) {
+  var app, _ref, _ref1, _ref2;
+  this.logServer = logServer;
+  this.host = config.host, this.port = config.port, this.auth = config.auth;
+  _ref = this.logServer, this.logNodes = _ref.logNodes, this.logStreams = _ref.logStreams;
+  this.restrictSocket = (_ref1 = config.restrictSocket) != null ? _ref1 : '*:*';
+  this._log = (_ref2 = config.logging) != null ? _ref2 : winston;
+  app = this._buildServer(config);
+  this.http = this._createServer(config, app);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.io.LogHarvester" id="apidoc.element.log.io.io.LogHarvester">
+        function <span class="apidocSignatureSpan">log.io.</span>io.LogHarvester
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function LogHarvester(config) {
+  var paths, s, _ref, _ref1;
+  this.nodeName = config.nodeName, this.server = config.server;
+  this.delim = (_ref = config.delimiter) != null ? _ref : '\r\n';
+  this._log = (_ref1 = config.logging) != null ? _ref1 : winston;
+  this.logStreams = (function() {
+    var _ref2, _results;
+    _ref2 = config.logStreams;
+    _results = [];
+    for (s in _ref2) {
+      paths = _ref2[s];
+      _results.push(new LogStream(s, paths, this._log));
+    }
+    return _results;
+  }).call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.io.LogServer" id="apidoc.element.log.io.io.LogServer">
+        function <span class="apidocSignatureSpan">log.io.</span>io.LogServer
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function LogServer(config) {
+  var _ref, _ref1;
+  if (config == null) {
+    config = {};
+  }
+  this._flush = __bind(this._flush, this);
+
+  this._receive = __bind(this._receive, this);
+
+  this.host = config.host, this.port = config.port;
+  this._log = (_ref = config.logging) != null ? _ref : winston;
+  this._delimiter = (_ref1 = config.delimiter) != null ? _ref1 : '\r\n';
+  this.logNodes = {};
+  this.logStreams = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.io.WebServer" id="apidoc.element.log.io.io.WebServer">
+        function <span class="apidocSignatureSpan">log.io.</span>io.WebServer
+        <span class="apidocSignatureSpan">(logServer, config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WebServer(logServer, config) {
+  var app, _ref, _ref1, _ref2;
+  this.logServer = logServer;
+  this.host = config.host, this.port = config.port, this.auth = config.auth;
+  _ref = this.logServer, this.logNodes = _ref.logNodes, this.logStreams = _ref.logStreams;
+  this.restrictSocket = (_ref1 = config.restrictSocket) != null ? _ref1 : '*:*';
+  this._log = (_ref2 = config.logging) != null ? _ref2 : winston;
+  app = this._buildServer(config);
+  this.http = this._createServer(config, app);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.log.io.LogHarvester" id="apidoc.module.log.io.LogHarvester">module log.io.LogHarvester</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.LogHarvester.LogHarvester" id="apidoc.element.log.io.LogHarvester.LogHarvester">
+        function <span class="apidocSignatureSpan">log.io.</span>LogHarvester
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function LogHarvester(config) {
+  var paths, s, _ref, _ref1;
+  this.nodeName = config.nodeName, this.server = config.server;
+  this.delim = (_ref = config.delimiter) != null ? _ref : '\r\n';
+  this._log = (_ref1 = config.logging) != null ? _ref1 : winston;
+  this.logStreams = (function() {
+    var _ref2, _results;
+    _ref2 = config.logStreams;
+    _results = [];
+    for (s in _ref2) {
+      paths = _ref2[s];
+      _results.push(new LogStream(s, paths, this._log));
+    }
+    return _results;
+  }).call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.log.io.LogHarvester.prototype" id="apidoc.module.log.io.LogHarvester.prototype">module log.io.LogHarvester.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.LogHarvester.prototype._announce" id="apidoc.element.log.io.LogHarvester.prototype._announce">
+        function <span class="apidocSignatureSpan">log.io.LogHarvester.prototype.</span>_announce
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_announce = function () {
+  var l, snames;
+  snames = ((function() {
+    var _i, _len, _ref, _results;
+    _ref = this.logStreams;
+    _results = [];
+    for (_i = 0, _len = _ref.length; _i &lt; _len; _i++) {
+      l = _ref[_i];
+      _results.push(l.name);
+    }
+    return _results;
+  }).call(this)).join(",");
+  this._log.info("Announcing: " + this.nodeName + " (" + snames + ")");
+  this._send('+node', this.nodeName, snames);
+  return this._send('+bind', 'node', this.nodeName);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return setTimeout((function() {
+      return _this._connect();
+    }), 2000);
+  });
+  this._log.info("Connecting to server...");
+  return this.socket.connect(this.server.port, this.server.host, function() {
+    _this._connected = true;
+    return _this.<span class="apidocCodeKeywordSpan">_announce</span>();
+  });
+};
+
+LogHarvester.prototype._sendLog = function(stream, msg) {
+  this._log.debug("Sending log: (" + stream.name + ") " + msg);
+  return this._send('+log', stream.name, this.nodeName, 'info', msg);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.LogHarvester.prototype._connect" id="apidoc.element.log.io.LogHarvester.prototype._connect">
+        function <span class="apidocSignatureSpan">log.io.LogHarvester.prototype.</span>_connect
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_connect = function () {
+  var _this = this;
+  this.socket = new net.Socket;
+  this.socket.on('error', function(error) {
+    _this._connected = false;
+    _this._log.error("Unable to connect server, trying again...");
+    return setTimeout((function() {
+      return _this._connect();
+    }), 2000);
+  });
+  this._log.info("Connecting to server...");
+  return this.socket.connect(this.server.port, this.server.host, function() {
+    _this._connected = true;
+    return _this._announce();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+    return _results;
+  }).call(this);
+}
+
+LogHarvester.prototype.run = function() {
+  var _this = this;
+  this.<span class="apidocCodeKeywordSpan">_connect</span>();
+  return this.logStreams.forEach(function(stream) {
+    return stream.watch().on('new_log', function(msg) {
+      if (_this._connected) {
+        return _this._sendLog(stream, msg);
+      }
+    });
+  });
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.LogHarvester.prototype._send" id="apidoc.element.log.io.LogHarvester.prototype._send">
+        function <span class="apidocSignatureSpan">log.io.LogHarvester.prototype.</span>_send
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_send = function () {
+  var args, mtype;
+  mtype = arguments[0], args = 2 &lt;= arguments.length ? __slice.call(arguments, 1) : [];
+  return this.socket.write("" + mtype + "|" + (args.join('|')) + this.delim);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    _this._connected = true;
+    return _this._announce();
+  });
+};
+
+LogHarvester.prototype._sendLog = function(stream, msg) {
+  this._log.debug("Sending log: (" + stream.name + ") " + msg);
+  return this.<span class="apidocCodeKeywordSpan">_send</span>('+log', stream.name, this.nodeName, 'info', msg
+);
+};
+
+LogHarvester.prototype._announce = function() {
+  var l, snames;
+  snames = ((function() {
+    var _i, _len, _ref, _results;
+    _ref = this.logStreams;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.LogHarvester.prototype._sendLog" id="apidoc.element.log.io.LogHarvester.prototype._sendLog">
+        function <span class="apidocSignatureSpan">log.io.LogHarvester.prototype.</span>_sendLog
+        <span class="apidocSignatureSpan">(stream, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_sendLog = function (stream, msg) {
+  this._log.debug("Sending log: (" + stream.name + ") " + msg);
+  return this._send('+log', stream.name, this.nodeName, 'info', msg);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+LogHarvester.prototype.run = function() {
+  var _this = this;
+  this._connect();
+  return this.logStreams.forEach(function(stream) {
+    return stream.watch().on('new_log', function(msg) {
+      if (_this._connected) {
+        return _this.<span class="apidocCodeKeywordSpan">_sendLog</span>(stream, msg);
+      }
+    });
+  });
+};
+
+LogHarvester.prototype._connect = function() {
+  var _this = this;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.LogHarvester.prototype.run" id="apidoc.element.log.io.LogHarvester.prototype.run">
+        function <span class="apidocSignatureSpan">log.io.LogHarvester.prototype.</span>run
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run = function () {
+  var _this = this;
+  this._connect();
+  return this.logStreams.forEach(function(stream) {
+    return stream.watch().on('new_log', function(msg) {
+      if (_this._connected) {
+        return _this._sendLog(stream, msg);
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+# Sends the following TCP messages to the server:
+"+node|my_server01|web_server\r\n"
+"+bind|node|my_server01\r\n"
+"+log|web_server|my_server01|info|this is log messages\r\n"
+
+# Usage:
+harvester = new LogHarvester config
+harvester.<span class="apidocCodeKeywordSpan">run</span>()
+*/
+
+
+(function() {
+var LogHarvester, LogStream, events, fs, net, winston,
+  __hasProp = {}.hasOwnProperty,
+  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function
+ ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.
+prototype; return child; },
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.log.io.LogServer" id="apidoc.module.log.io.LogServer">module log.io.LogServer</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.LogServer.LogServer" id="apidoc.element.log.io.LogServer.LogServer">
+        function <span class="apidocSignatureSpan">log.io.</span>LogServer
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function LogServer(config) {
+  var _ref, _ref1;
+  if (config == null) {
+    config = {};
+  }
+  this._flush = __bind(this._flush, this);
+
+  this._receive = __bind(this._receive, this);
+
+  this.host = config.host, this.port = config.port;
+  this._log = (_ref = config.logging) != null ? _ref : winston;
+  this._delimiter = (_ref1 = config.delimiter) != null ? _ref1 : '\r\n';
+  this.logNodes = {};
+  this.logStreams = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.LogServer.EventEmitter" id="apidoc.element.log.io.LogServer.EventEmitter">
+        function <span class="apidocSignatureSpan">log.io.LogServer.</span>EventEmitter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.LogServer.init" id="apidoc.element.log.io.LogServer.init">
+        function <span class="apidocSignatureSpan">log.io.LogServer.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function () {
+  this.domain = null;
+  if (EventEmitter.usingDomains) {
+    // if there is an active domain, then attach to it.
+    domain = domain || require('domain');
+    if (domain.active &amp;&amp; !(this instanceof domain.Domain)) {
+      this.domain = domain.active;
+    }
+  }
+
+  if (!this._events || this._events === Object.getPrototypeOf(this)._events) {
+    this._events = new EventHandlers();
+    this._eventsCount = 0;
+  }
+
+  this._maxListeners = this._maxListeners || undefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.LogServer.listenerCount" id="apidoc.element.log.io.LogServer.listenerCount">
+        function <span class="apidocSignatureSpan">log.io.LogServer.</span>listenerCount
+        <span class="apidocSignatureSpan">(emitter, type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listenerCount = function (emitter, type) {
+  if (typeof emitter.listenerCount === 'function') {
+    return emitter.listenerCount(type);
+  } else {
+    return listenerCount.call(emitter, type);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.log.io.LogServer.prototype" id="apidoc.module.log.io.LogServer.prototype">module log.io.LogServer.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.LogServer.prototype.__add" id="apidoc.element.log.io.LogServer.prototype.__add">
+        function <span class="apidocSignatureSpan">log.io.LogServer.prototype.</span>__add
+        <span class="apidocSignatureSpan">(name, pnames, _collection, _objClass, objName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">__add = function (name, pnames, _collection, _objClass, objName) {
+  var obj, p, _i, _len, _results;
+  this._log.info("Adding " + objName + ": " + name + " (" + pnames + ")");
+  pnames = pnames.split(',');
+  obj = _collection[name] = _collection[name] || new _objClass(this, name, pnames);
+  _results = [];
+  for (_i = 0, _len = pnames.length; _i &lt; _len; _i++) {
+    p = pnames[_i];
+    if (!obj.pairs[p]) {
+      _results.push(obj.addPair(p));
+    }
+  }
+  return _results;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+};
+
+LogServer.prototype._addNode = function(nname, snames) {
+  if (snames == null) {
+    snames = '';
+  }
+  return this.<span class="apidocCodeKeywordSpan">__add</span>(nname, snames, this.logNodes, LogNode, 'node');
+};
+
+LogServer.prototype._addStream = function(sname, nnames) {
+  if (nnames == null) {
+    nnames = '';
+  }
+  return this.__add(sname, nnames, this.logStreams, LogStream, 'stream');
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.LogServer.prototype.__remove" id="apidoc.element.log.io.LogServer.prototype.__remove">
+        function <span class="apidocSignatureSpan">log.io.LogServer.prototype.</span>__remove
+        <span class="apidocSignatureSpan">(name, _collection, objType)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">__remove = function (name, _collection, objType) {
+  var obj;
+  if (obj = _collection[name]) {
+    this._log.info("Removing " + objType + ": " + name);
+    obj.remove();
+    return delete _collection[name];
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (nnames == null) {
+    nnames = '';
+  }
+  return this.__add(sname, nnames, this.logStreams, LogStream, 'stream');
+};
+
+LogServer.prototype._removeNode = function(nname) {
+  return this.<span class="apidocCodeKeywordSpan">__remove</span>(nname, this.logNodes, 'node');
+};
+
+LogServer.prototype._removeStream = function(sname) {
+  return this.__remove(sname, this.logStreams, 'stream');
+};
+
+LogServer.prototype._newLog = function() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.LogServer.prototype._addNode" id="apidoc.element.log.io.LogServer.prototype._addNode">
+        function <span class="apidocSignatureSpan">log.io.LogServer.prototype.</span>_addNode
+        <span class="apidocSignatureSpan">(nname, snames)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_addNode = function (nname, snames) {
+  if (snames == null) {
+    snames = '';
+  }
+  return this.__add(nname, snames, this.logNodes, LogNode, 'node');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+LogServer.prototype._newLog = function() {
+  var logLevel, message, nname, node, sname, stream;
+  sname = arguments[0], nname = arguments[1], logLevel = arguments[2], message = 4 &lt;= arguments.length ? __slice.call(arguments
+, 3) : [];
+  message = message.join('|');
+  this._log.debug("Log message: (" + sname + ", " + nname + ", " + logLevel + ") " + message
+);
+  node = this.logNodes[nname] || this.<span class="apidocCodeKeywordSpan">_addNode</span>(nname, sname);
+  stream = this.logStreams[sname] || this._addStream(sname, nname);
+  return this.emit('new_log', stream, node, logLevel, message);
+};
+
+LogServer.prototype.__add = function(name, pnames, _collection, _objClass, objName) {
+  var obj, p, _i, _len, _results;
+  this._log.info("Adding " + objName + ": " + name + " (" + pnames + ")");
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.LogServer.prototype._addStream" id="apidoc.element.log.io.LogServer.prototype._addStream">
+        function <span class="apidocSignatureSpan">log.io.LogServer.prototype.</span>_addStream
+        <span class="apidocSignatureSpan">(sname, nnames)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_addStream = function (sname, nnames) {
+  if (nnames == null) {
+    nnames = '';
+  }
+  return this.__add(sname, nnames, this.logStreams, LogStream, 'stream');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+LogServer.prototype._newLog = function() {
+  var logLevel, message, nname, node, sname, stream;
+  sname = arguments[0], nname = arguments[1], logLevel = arguments[2], message = 4 &lt;= arguments.length ? __slice.call(arguments
+, 3) : [];
+  message = message.join('|');
+  this._log.debug("Log message: (" + sname + ", " + nname + ", " + logLevel + ") " + message
+);
+  node = this.logNodes[nname] || this._addNode(nname, sname);
+  stream = this.logStreams[sname] || this.<span class="apidocCodeKeywordSpan">_addStream</span>(sname, nname);
+  return this.emit('new_log', stream, node, logLevel, message);
+};
+
+LogServer.prototype.__add = function(name, pnames, _collection, _objClass, objName) {
+  var obj, p, _i, _len, _results;
+  this._log.info("Adding " + objName + ": " + name + " (" + pnames + ")");
+  pnames = pnames.split(',');
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.LogServer.prototype._bindNode" id="apidoc.element.log.io.LogServer.prototype._bindNode">
+        function <span class="apidocSignatureSpan">log.io.LogServer.prototype.</span>_bindNode
+        <span class="apidocSignatureSpan">(socket, obj, nname)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_bindNode = function (socket, obj, nname) {
+  var node;
+  if (node = this.logNodes[nname]) {
+    this._log.info("Binding node '" + nname + "' to TCP socket");
+    socket.node = node;
+    return this._ping(socket);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.LogServer.prototype._flush" id="apidoc.element.log.io.LogServer.prototype._flush">
+        function <span class="apidocSignatureSpan">log.io.LogServer.prototype.</span>_flush
+        <span class="apidocSignatureSpan">(socket)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_flush = function (socket) {
+  var msg, msgs, _i, _j, _len, _ref, _results;
+  socket.pause();
+  _ref = socket._buffer.split(this._delimiter), msgs = 2 &lt;= _ref.length ? __slice.call(_ref, 0, _i = _ref.length - 1) : (_i = 0, []),
+socket._buffer = _ref[_i++];
+  socket.resume();
+  _results = [];
+  for (_j = 0, _len = msgs.length; _j &lt; _len; _j++) {
+    msg = msgs[_j];
+    _results.push(this._handle(socket, msg));
+  }
+  return _results;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+LogServer.prototype._receive = function(data, socket) {
+  var part;
+  part = data.toString();
+  socket._buffer += part;
+  this._log.debug("Received TCP message: " + part);
+  if (socket._buffer.indexOf(this._delimiter &gt;= 0)) {
+    return this.<span class="apidocCodeKeywordSpan">_flush</span>(socket);
+  }
+};
+
+LogServer.prototype._flush = function(socket) {
+  var msg, msgs, _i, _j, _len, _ref, _results;
+  socket.pause();
+  _ref = socket._buffer.split(this._delimiter), msgs = 2 &lt;= _ref.length ? __slice.call(_ref, 0, _i = _ref.length - 1) : (_i
+ = 0, []), socket._buffer = _ref[_i++];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.LogServer.prototype._handle" id="apidoc.element.log.io.LogServer.prototype._handle">
+        function <span class="apidocSignatureSpan">log.io.LogServer.prototype.</span>_handle
+        <span class="apidocSignatureSpan">(socket, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_handle = function (socket, msg) {
+  var args, mtype, _ref;
+  this._log.debug("Handling message: " + msg);
+  _ref = msg.split('|'), mtype = _ref[0], args = 2 &lt;= _ref.length ? __slice.call(_ref, 1) : [];
+  switch (mtype) {
+    case '+log':
+      return this._newLog.apply(this, args);
+    case '+node':
+      return this._addNode.apply(this, args);
+    case '+stream':
+      return this._addStream.apply(this, args);
+    case '-node':
+      return this._removeNode.apply(this, args);
+    case '-stream':
+      return this._removeStream.apply(this, args);
+    case '+bind':
+      return this._bindNode.apply(this, [socket].concat(__slice.call(args)));
+    default:
+      return this._log.error("Invalid TCP message: " + msg);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var msg, msgs, _i, _j, _len, _ref, _results;
+  socket.pause();
+  _ref = socket._buffer.split(this._delimiter), msgs = 2 &lt;= _ref.length ? __slice.call(_ref, 0, _i = _ref.length - 1) : (_i
+ = 0, []), socket._buffer = _ref[_i++];
+  socket.resume();
+  _results = [];
+  for (_j = 0, _len = msgs.length; _j &lt; _len; _j++) {
+    msg = msgs[_j];
+    _results.push(this.<span class="apidocCodeKeywordSpan">_handle</span>(socket, msg));
+  }
+  return _results;
+};
+
+LogServer.prototype._handle = function(socket, msg) {
+  var args, mtype, _ref;
+  this._log.debug("Handling message: " + msg);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.LogServer.prototype._newLog" id="apidoc.element.log.io.LogServer.prototype._newLog">
+        function <span class="apidocSignatureSpan">log.io.LogServer.prototype.</span>_newLog
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_newLog = function () {
+  var logLevel, message, nname, node, sname, stream;
+  sname = arguments[0], nname = arguments[1], logLevel = arguments[2], message = 4 &lt;= arguments.length ? __slice.call(arguments,
+3) : [];
+  message = message.join('|');
+  this._log.debug("Log message: (" + sname + ", " + nname + ", " + logLevel + ") " + message);
+  node = this.logNodes[nname] || this._addNode(nname, sname);
+  stream = this.logStreams[sname] || this._addStream(sname, nname);
+  return this.emit('new_log', stream, node, logLevel, message);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.LogServer.prototype._ping" id="apidoc.element.log.io.LogServer.prototype._ping">
+        function <span class="apidocSignatureSpan">log.io.LogServer.prototype.</span>_ping
+        <span class="apidocSignatureSpan">(socket)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_ping = function (socket) {
+  var _this = this;
+  if (socket.node) {
+    socket.write('ping');
+    return setTimeout((function() {
+      return _this._ping(socket);
+    }), 2000);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+LogServer.prototype._bindNode = function(socket, obj, nname) {
+  var node;
+  if (node = this.logNodes[nname]) {
+    this._log.info("Binding node '" + nname + "' to TCP socket");
+    socket.node = node;
+    return this.<span class="apidocCodeKeywordSpan">_ping</span>(socket);
+  }
+};
+
+LogServer.prototype._ping = function(socket) {
+  var _this = this;
+  if (socket.node) {
+    socket.write('ping');
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.LogServer.prototype._receive" id="apidoc.element.log.io.LogServer.prototype._receive">
+        function <span class="apidocSignatureSpan">log.io.LogServer.prototype.</span>_receive
+        <span class="apidocSignatureSpan">(data, socket)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_receive = function (data, socket) {
+  var part;
+  part = data.toString();
+  socket._buffer += part;
+  this._log.debug("Received TCP message: " + part);
+  if (socket._buffer.indexOf(this._delimiter &gt;= 0)) {
+    return this._flush(socket);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+LogServer.prototype.run = function() {
+  var _this = this;
+  this.listener = net.createServer(function(socket) {
+    socket._buffer = '';
+    socket.on('data', function(data) {
+      return _this.<span class="apidocCodeKeywordSpan">_receive</span>(data, socket);
+    });
+    socket.on('error', function() {
+      return _this._tearDown(socket);
+    });
+    return socket.on('close', function() {
+      return _this._tearDown(socket);
+    });
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.LogServer.prototype._removeNode" id="apidoc.element.log.io.LogServer.prototype._removeNode">
+        function <span class="apidocSignatureSpan">log.io.LogServer.prototype.</span>_removeNode
+        <span class="apidocSignatureSpan">(nname)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_removeNode = function (nname) {
+  return this.__remove(nname, this.logNodes, 'node');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  });
+  return this.listener.listen(this.port, this.host);
+};
+
+LogServer.prototype._tearDown = function(socket) {
+  this._log.error('Lost TCP connection...');
+  if (socket.node) {
+    this.<span class="apidocCodeKeywordSpan">_removeNode</span>(socket.node.name);
+    return delete socket.node;
+  }
+};
+
+LogServer.prototype._receive = function(data, socket) {
+  var part;
+  part = data.toString();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.LogServer.prototype._removeStream" id="apidoc.element.log.io.LogServer.prototype._removeStream">
+        function <span class="apidocSignatureSpan">log.io.LogServer.prototype.</span>_removeStream
+        <span class="apidocSignatureSpan">(sname)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_removeStream = function (sname) {
+  return this.__remove(sname, this.logStreams, 'stream');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.LogServer.prototype._tearDown" id="apidoc.element.log.io.LogServer.prototype._tearDown">
+        function <span class="apidocSignatureSpan">log.io.LogServer.prototype.</span>_tearDown
+        <span class="apidocSignatureSpan">(socket)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_tearDown = function (socket) {
+  this._log.error('Lost TCP connection...');
+  if (socket.node) {
+    this._removeNode(socket.node.name);
+    return delete socket.node;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var _this = this;
+  this.listener = net.createServer(function(socket) {
+    socket._buffer = '';
+    socket.on('data', function(data) {
+      return _this._receive(data, socket);
+    });
+    socket.on('error', function() {
+      return _this.<span class="apidocCodeKeywordSpan">_tearDown</span>(socket);
+    });
+    return socket.on('close', function() {
+      return _this._tearDown(socket);
+    });
+  });
+  return this.listener.listen(this.port, this.host);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.LogServer.prototype.constructor" id="apidoc.element.log.io.LogServer.prototype.constructor">
+        function <span class="apidocSignatureSpan">log.io.LogServer.prototype.</span>constructor
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function LogServer(config) {
+  var _ref, _ref1;
+  if (config == null) {
+    config = {};
+  }
+  this._flush = __bind(this._flush, this);
+
+  this._receive = __bind(this._receive, this);
+
+  this.host = config.host, this.port = config.port;
+  this._log = (_ref = config.logging) != null ? _ref : winston;
+  this._delimiter = (_ref1 = config.delimiter) != null ? _ref1 : '\r\n';
+  this.logNodes = {};
+  this.logStreams = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.LogServer.prototype.run" id="apidoc.element.log.io.LogServer.prototype.run">
+        function <span class="apidocSignatureSpan">log.io.LogServer.prototype.</span>run
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run = function () {
+  var _this = this;
+  this.listener = net.createServer(function(socket) {
+    socket._buffer = '';
+    socket.on('data', function(data) {
+      return _this._receive(data, socket);
+    });
+    socket.on('error', function() {
+      return _this._tearDown(socket);
+    });
+    return socket.on('close', function() {
+      return _this._tearDown(socket);
+    });
+  });
+  return this.listener.listen(this.port, this.host);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+# Sends the following TCP messages to the server:
+"+node|my_server01|web_server\r\n"
+"+bind|node|my_server01\r\n"
+"+log|web_server|my_server01|info|this is log messages\r\n"
+
+# Usage:
+harvester = new LogHarvester config
+harvester.<span class="apidocCodeKeywordSpan">run</span>()
+*/
+
+
+(function() {
+var LogHarvester, LogStream, events, fs, net, winston,
+  __hasProp = {}.hasOwnProperty,
+  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function
+ ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.
+prototype; return child; },
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.log.io.WebServer" id="apidoc.module.log.io.WebServer">module log.io.WebServer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.WebServer.WebServer" id="apidoc.element.log.io.WebServer.WebServer">
+        function <span class="apidocSignatureSpan">log.io.</span>WebServer
+        <span class="apidocSignatureSpan">(logServer, config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WebServer(logServer, config) {
+  var app, _ref, _ref1, _ref2;
+  this.logServer = logServer;
+  this.host = config.host, this.port = config.port, this.auth = config.auth;
+  _ref = this.logServer, this.logNodes = _ref.logNodes, this.logStreams = _ref.logStreams;
+  this.restrictSocket = (_ref1 = config.restrictSocket) != null ? _ref1 : '*:*';
+  this._log = (_ref2 = config.logging) != null ? _ref2 : winston;
+  app = this._buildServer(config);
+  this.http = this._createServer(config, app);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.log.io.WebServer.prototype" id="apidoc.module.log.io.WebServer.prototype">module log.io.WebServer.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.WebServer.prototype._buildServer" id="apidoc.element.log.io.WebServer.prototype._buildServer">
+        function <span class="apidocSignatureSpan">log.io.WebServer.prototype.</span>_buildServer
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_buildServer = function (config) {
+  var app, ips, staticPath, _ref,
+    _this = this;
+  app = express();
+  if (this.auth != null) {
+    app.use(express.basicAuth(this.auth.user, this.auth.pass));
+  }
+  if (config.restrictHTTP) {
+    ips = new RegExp(config.restrictHTTP.join('|'));
+    app.all('/', function(req, res, next) {
+      if (!req.ip.match(ips)) {
+        return res.send(403, "Your IP (" + req.ip + ") is not allowed.");
+      }
+      return next();
+    });
+  }
+  staticPath = (_ref = config.staticPath) != null ? _ref : __dirname + '/../';
+  return app.use(express["static"](staticPath));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function WebServer(logServer, config) {
+  var app, _ref, _ref1, _ref2;
+  this.logServer = logServer;
+  this.host = config.host, this.port = config.port, this.auth = config.auth;
+  _ref = this.logServer, this.logNodes = _ref.logNodes, this.logStreams = _ref.logStreams;
+  this.restrictSocket = (_ref1 = config.restrictSocket) != null ? _ref1 : '*:*';
+  this._log = (_ref2 = config.logging) != null ? _ref2 : winston;
+  app = this.<span class="apidocCodeKeywordSpan">_buildServer</span>(config);
+  this.http = this._createServer(config, app);
+}
+
+WebServer.prototype._buildServer = function(config) {
+  var app, ips, staticPath, _ref,
+    _this = this;
+  app = express();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.WebServer.prototype._createServer" id="apidoc.element.log.io.WebServer.prototype._createServer">
+        function <span class="apidocSignatureSpan">log.io.WebServer.prototype.</span>_createServer
+        <span class="apidocSignatureSpan">(config, app)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_createServer = function (config, app) {
+  if (config.ssl) {
+    return https.createServer({
+      key: fs.readFileSync(config.ssl.key),
+      cert: fs.readFileSync(config.ssl.cert)
+    }, app);
+  } else {
+    return http.createServer(app);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var app, _ref, _ref1, _ref2;
+  this.logServer = logServer;
+  this.host = config.host, this.port = config.port, this.auth = config.auth;
+  _ref = this.logServer, this.logNodes = _ref.logNodes, this.logStreams = _ref.logStreams;
+  this.restrictSocket = (_ref1 = config.restrictSocket) != null ? _ref1 : '*:*';
+  this._log = (_ref2 = config.logging) != null ? _ref2 : winston;
+  app = this._buildServer(config);
+  this.http = this.<span class="apidocCodeKeywordSpan">_createServer</span>(config, app);
+}
+
+WebServer.prototype._buildServer = function(config) {
+  var app, ips, staticPath, _ref,
+    _this = this;
+  app = express();
+  if (this.auth != null) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.WebServer.prototype.run" id="apidoc.element.log.io.WebServer.prototype.run">
+        function <span class="apidocSignatureSpan">log.io.WebServer.prototype.</span>run
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run = function () {
+  var _emit, _on,
+    _this = this;
+  this._log.info('Starting Log.io Web Server...');
+  this.logServer.run();
+  io = io.listen(this.http.listen(this.port, this.host));
+  io.set('log level', 1);
+  io.set('origins', this.restrictSocket);
+  this.listener = io.sockets;
+  _on = function() {
+    var args, _ref;
+    args = 1 &lt;= arguments.length ? __slice.call(arguments, 0) : [];
+    return (_ref = _this.logServer).on.apply(_ref, args);
+  };
+  _emit = function(_event, msg) {
+    _this._log.debug("Relaying: " + _event);
+    return _this.listener.emit(_event, msg);
+  };
+  _on('add_node', function(node) {
+    return _emit('add_node', node.toDict());
+  });
+  _on('add_stream', function(stream) {
+    return _emit('add_stream', stream.toDict());
+  });
+  _on('add_stream_pair', function(stream, nname) {
+    return _emit('add_pair', {
+      stream: stream.name,
+      node: nname
+    });
+  });
+  _on('add_node_pair', function(node, sname) {
+    return _emit('add_pair', {
+      stream: sname,
+      node: node.name
+    });
+  });
+  _on('remove_node', function(node) {
+    return _emit('remove_node', node.toDict());
+  });
+  _on('remove_stream', function(stream) {
+    return _emit('remove_stream', stream.toDict());
+  });
+  _on('new_log', function(stream, node, level, message) {
+    _emit('ping', {
+      stream: stream.name,
+      node: node.name
+    });
+    return _this.listener["in"]("" + stream.name + ":" + node.name).emit('new_log', {
+      stream: stream.name,
+      node: node.name,
+      level: level,
+      message: message
+    });
+  });
+  this.listener.on('connection', function(wclient) {
+    var n, node, s, stream, _ref, _ref1, _ref2, _ref3;
+    _ref = _this.logNodes;
+    for (n in _ref) {
+      node = _ref[n];
+      wclient.emit('add_node', node.toDict());
+    }
+    _ref1 = _this.logStreams;
+    for (s in _ref1) {
+      stream = _ref1[s];
+      wclient.emit('add_stream', stream.toDict());
+    }
+    _ref2 = _this.logNodes;
+    for (n in _ref2) {
+      node = _ref2[n];
+      _ref3 = node.pairs;
+      for (s in _ref3) {
+        stream = _ref3[s];
+        wclient.emit('add_pair', {
+          stream: s,
+          node: n
+        });
+      }
+    }
+    wclient.emit('initialized');
+    wclient.on('watch', function(pid) {
+      return wclient.join(pid);
+    });
+    return wclient.on('unwatch', function(pid) {
+      return wclient.leave(pid);
+    });
+  });
+  return this._log.info('Server started, listening...');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+# Sends the following TCP messages to the server:
+"+node|my_server01|web_server\r\n"
+"+bind|node|my_server01\r\n"
+"+log|web_server|my_server01|info|this is log messages\r\n"
+
+# Usage:
+harvester = new LogHarvester config
+harvester.<span class="apidocCodeKeywordSpan">run</span>()
+*/
+
+
+(function() {
+var LogHarvester, LogStream, events, fs, net, winston,
+  __hasProp = {}.hasOwnProperty,
+  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function
+ ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.
+prototype; return child; },
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.log.io.harvester" id="apidoc.module.log.io.harvester">module log.io.harvester</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.harvester.LogHarvester" id="apidoc.element.log.io.harvester.LogHarvester">
+        function <span class="apidocSignatureSpan">log.io.harvester.</span>LogHarvester
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function LogHarvester(config) {
+  var paths, s, _ref, _ref1;
+  this.nodeName = config.nodeName, this.server = config.server;
+  this.delim = (_ref = config.delimiter) != null ? _ref : '\r\n';
+  this._log = (_ref1 = config.logging) != null ? _ref1 : winston;
+  this.logStreams = (function() {
+    var _ref2, _results;
+    _ref2 = config.logStreams;
+    _results = [];
+    for (s in _ref2) {
+      paths = _ref2[s];
+      _results.push(new LogStream(s, paths, this._log));
+    }
+    return _results;
+  }).call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.log.io.server" id="apidoc.module.log.io.server">module log.io.server</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.server.LogServer" id="apidoc.element.log.io.server.LogServer">
+        function <span class="apidocSignatureSpan">log.io.server.</span>LogServer
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function LogServer(config) {
+  var _ref, _ref1;
+  if (config == null) {
+    config = {};
+  }
+  this._flush = __bind(this._flush, this);
+
+  this._receive = __bind(this._receive, this);
+
+  this.host = config.host, this.port = config.port;
+  this._log = (_ref = config.logging) != null ? _ref : winston;
+  this._delimiter = (_ref1 = config.delimiter) != null ? _ref1 : '\r\n';
+  this.logNodes = {};
+  this.logStreams = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.log.io.server.WebServer" id="apidoc.element.log.io.server.WebServer">
+        function <span class="apidocSignatureSpan">log.io.server.</span>WebServer
+        <span class="apidocSignatureSpan">(logServer, config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WebServer(logServer, config) {
+  var app, _ref, _ref1, _ref2;
+  this.logServer = logServer;
+  this.host = config.host, this.port = config.port, this.auth = config.auth;
+  _ref = this.logServer, this.logNodes = _ref.logNodes, this.logStreams = _ref.logStreams;
+  this.restrictSocket = (_ref1 = config.restrictSocket) != null ? _ref1 : '*:*';
+  this._log = (_ref2 = config.logging) != null ? _ref2 : winston;
+  app = this._buildServer(config);
+  this.http = this._createServer(config, app);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
